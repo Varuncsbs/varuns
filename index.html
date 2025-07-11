@@ -9,6 +9,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-55KCJGXT');</script>
 <!-- End Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6MFWSG27B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-S6MFWSG27B');
+  </script>
   </head>
   
   <body>
@@ -89,9 +96,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="thankyou.html">
   <button id="buy-now-button">Buy Now</button>
 </a>
-  </DIV>
-    <button id="addToCartBtn">Add to Cart</button>
-    <button id="buyNowBtn">Buy Now</button>
+  
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    button, a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    button:hover, a:hover {
+      background-color: #0056b3;
+    }
+
+    .thank-you-box {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .thank-you-box h1 {
+      color: #28a745;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .thank-you-box p {
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="main-content">
+    <h1>Welcome to Varun's GA4 Practice Site</h1>
+
+    <div class="section">
+      <h2>1. Sign Up Section</h2>
+      <button id="signUpBtn">Sign Up Now</button>
+    </div>
+
+    <div class="section">
+      <h2>2. Contact Section</h2>
+      <button id="contactBtn">Contact Us</button>
+    </div>
+
+    <div class="section">
+      <h2>3. Download Resource</h2>
+      <a href="#" id="downloadBtn">Download Brochure</a>
+    </div>
+
+    <div class="section">
+      <h2>4. Subscribe</h2>
+      <input type="email" placeholder="Enter your email">
+      <button id="subscribeBtn">Subscribe</button>
+    </div>
+
+    <div class="section">
+      <h2>5. Learn More</h2>
+      <a href="#" id="learnMoreBtn">Learn More</a>
+    </div>
+
+    <div class="section">
+      <h2>6. Product Section</h2>
+      <p>Sample Product - ₹99.99</p>
+      <button id="buyNowBtn">Buy Now</button>
+    </div>
   </div>
+
+  <!-- Hidden Thank You Message -->
+  <div id="thank-you" class="thank-you-box" style="display:none;">
+    <h1>🎉 Thank You!</h1>
+    <p>Your purchase was successful.<br>We appreciate your support.</p>
+  </div>
+
+  <script>
+    // Buy Now Button → Show Thank You and fire GA4 conversion
+    document.getElementById('buyNowBtn').addEventListener('click', function () {
+      document.getElementById('main-content').style.display = 'none';
+      document.getElementById('thank-you').style.display = 'block';
+
+      // Fire GA4 purchase_complete event
+      gtag('event', 'purchase_complete', {
+        value: 99.99,
+        currency: 'INR',
+        transaction_id: 'TXN123456',
+        debug_mode: true
+      });
+    });
+  </script>
   </body>
 </html>
