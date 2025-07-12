@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Global Site Tag (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6MFWSG27B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // Initialize GA4
+    gtag('config', 'G-S6MFWSG27B');
+
+    // Fire conversion event
+    gtag('event', 'purchase_complete', {
+      value: 99.99,
+      currency: 'INR',
+      transaction_id: 'TXN123456',
+      debug_mode: true
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .thank-you-box {
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .thank-you-box h1 {
+      color: #28a745;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .thank-you-box p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .details {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="thank-you-box">
+    <h1>🎉 Thank You!</h1>
+    <p>Your purchase was successful.</p>
+    <div class="details">
+      <strong>Transaction ID:</strong> TXN123456<br>
+      <strong>Amount:</strong> ₹99.99<br>
+      <strong>Status:</strong> Conversion Tracked via GA4
+    </div>
+    <a class="btn" href="index.html">← Back to Home</a>
+  </div>
+
+</body>
+</html>
