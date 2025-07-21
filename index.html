@@ -206,5 +206,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     });
   </script>
+  <script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: "purchase_complete",
+  transaction_id: "TXN12345",
+  value: 99.99,
+  currency: "USD",
+  coupon: "SUMMER25",
+  payment_type: "credit_card",
+  items: [
+    {
+      item_name: "Sunglasses",
+      item_id: "SG123",
+      quantity: 1,
+      price: 99.99
+    }
+  ]
+});
+</script>
   </body>
 </html>
