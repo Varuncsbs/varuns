@@ -95,6 +95,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <strong>Amount:</strong> ₹99.99<br>
       <strong>Status:</strong> Conversion Tracked via GA4
     </div>
+
+    <!-- Order Summary Section + Styles + Data Layer Script -->
+<div class="order-summary">
+  <h2>Order Summary</h2>
+  <div class="item">
+    <strong>Product:</strong> Premium Sunglasses<br>
+    <strong>SKU:</strong> SG123<br>
+    <strong>Quantity:</strong> 1<br>
+    <strong>Price:</strong> $99.99
+  </div>
+  <div>
+    <strong>Total:</strong> $99.99<br>
+    <strong>Coupon:</strong> SUMMER25<br>
+    <strong>Payment:</strong> Credit Card
+  </div>
+</div>
+
+<style>
+  .order-summary {
+    background: #f9f9f9;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    font-family: "Segoe UI", sans-serif;
+    color: #333;
+  }
+  .order-summary h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  .order-summary .item {
+    margin-bottom: 15px;
+  }
+  .order-summary strong {
+    color: #222;
+  }
+</style>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "purchase_complete",
+    transaction_id: "TXN001",         // Replace with dynamic ID if needed
+    value: 99.99,
+    currency: "USD",
+    coupon: "SUMMER25",
+    payment_type: "credit_card",
+    items: [
+      {
+        item_name: "Premium Sunglasses",
+        item_id: "SG123",
+        quantity: 1,
+        price: 99.99
+      }
+    ]
+  });
+</script>
     <script>
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
