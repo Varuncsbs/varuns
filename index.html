@@ -210,19 +210,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
   event: "purchase",
-  transaction_id: "TXN12345",
-  value: 99.99,
-  currency: "USD",
-  coupon: "SUMMER25",
-  payment_type: "credit_card",
-  items: [
-    {
-      item_name: "Sunglasses",
-      item_id: "SG123",
-      quantity: 1,
-      price: 99.99
-    }
-  ]
+  ecommerce: {
+    transaction_id: "TXN123456",
+    value: 99.99,
+    currency: "USD",
+    coupon: "SUMMER25",
+    payment_type: "credit card",
+    items: [
+      {
+        item_id: "SKU123",
+        item_name: "Premium Course Access",
+        price: 99.99,
+        quantity: 1
+      }
+    ]
+  }
 });
 </script>
   </body>
