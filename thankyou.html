@@ -140,28 +140,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </style>
 
 <script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  event: "purchase_complete",
-  transaction_id: "TXN12345",
-  value: 99.99,
-  currency: "USD",
-  coupon: "SUMMER25",
-  payment_type: "credit_card",
-  items: [
-    {
-      item_id: "SKU123",
-      item_name: "Product Name",
-      price: 49.99,
-      quantity: 2
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "purchase",  // ✅ Valid for ecommerce reporting
+    ecommerce: {
+      transaction_id: "TXN12345",
+      value: 99.99,
+      currency: "USD",
+      coupon: "SUMMER25",
+      payment_type: "credit_card",
+      items: [
+        {
+          item_id: "SKU123",
+          item_name: "Premium Course Access",
+          price: 99.99,
+          quantity: 1
+        }
+      ]
     }
-  ]
-});
+  });
 </script>
-});
-</script>
-</script>
-</script>
+
     <a class="btn" href="index.html">← Back to Home</a>
   </div>
 
