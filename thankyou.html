@@ -1,53 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-55KCJGXT');</script>
   <meta charset="UTF-8">
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-55KCJGXT&v=nopurchasecomplete"></script>
   <title>Thank You!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Global Site Tag (GA4) -->
+  <!-- GTM Script -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-55KCJGXT');
+  </script>
+
+  <!-- GA4 Global Site Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6MFWSG27B"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    // Initialize GA4
     gtag('config', 'G-S6MFWSG27B');
-
-    <script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  event: "purchase",
-  ecommerce: {
-    transaction_id: "TXN123456",
-    value: 99.99,
-    currency: "USD",
-    coupon: "SUMMER25",
-    payment_type: "credit card",
-    items: [
-      {
-        item_id: "SKU123",
-        item_name: "Premium Course Access",
-        price: 99.99,
-        quantity: 1
-      }
-    ]
-  }
-});
-</script>
   </script>
 
   <style>
-   
-    {
+    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f4f6f8;
       display: flex;
@@ -96,11 +73,43 @@ window.dataLayer.push({
     .btn:hover {
       background-color: #0056b3;
     }
+
+    .order-summary {
+      background: #f9f9f9;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 8px;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      font-family: "Segoe UI", sans-serif;
+      color: #333;
+    }
+
+    .order-summary h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+
+    .order-summary .item {
+      margin-bottom: 15px;
+    }
+
+    .order-summary strong {
+      color: #222;
+    }
   </style>
 </head>
+
 <body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55KCJGXT"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- GTM Fallback for No-JS -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55KCJGXT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
 
   <div class="thank-you-box">
     <h1>🎉 Thank You!</h1>
@@ -111,73 +120,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <strong>Status:</strong> Conversion Tracked via GA4
     </div>
 
-    <!-- Order Summary Section + Styles + Data Layer Script -->
-<div class="order-summary">
-  <h2>Order Summary</h2>
-  <div class="item">
-    <strong>Product:</strong> Premium Sunglasses<br>
-    <strong>SKU:</strong> SG123<br>
-    <strong>Quantity:</strong> 1<br>
-    <strong>Price:</strong> $99.99
-  </div>
-  <div>
-    <strong>Total:</strong> $99.99<br>
-    <strong>Coupon:</strong> SUMMER25<br>
-    <strong>Payment:</strong> Credit Card
-  </div>
-</div>
-
-<style>
-  .order-summary {
-    background: #f9f9f9;
-    padding: 20px;
-    margin-top: 30px;
-    border-radius: 8px;
-    text-align: left;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    font-family: "Segoe UI", sans-serif;
-    color: #333;
-  }
-  .order-summary h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #2c3e50;
-  }
-  .order-summary .item {
-    margin-bottom: 15px;
-  }
-  .order-summary strong {
-    color: #222;
-  }
-</style>
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: "purchase",  // ✅ Valid for ecommerce reporting
-    ecommerce: {
-      transaction_id: "TXN12345",
-      value: 99.99,
-      currency: "USD",
-      coupon: "SUMMER25",
-      payment_type: "credit_card",
-      items: [
-        {
-          item_id: "SKU123",
-          item_name: "Premium Course Access",
-          price: 99.99,
-          quantity: 1
-        }
-      ]
-    }
-  });
-</script>
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div class="item">
+        <strong>Product:</strong> Premium Course Access<br>
+        <strong>SKU:</strong> SKU123<br>
+        <strong>Quantity:</strong> 1<br>
+        <strong>Price:</strong> $99.99
+      </div>
+      <div>
+        <strong>Total:</strong> $99.99<br>
+        <strong>Coupon:</strong> SUMMER25<br>
+        <strong>Payment:</strong> Credit Card
+      </div>
+    </div>
 
     <a class="btn" href="index.html">← Back to Home</a>
   </div>
 
+  <!-- ✅ Clean Purchase Event Push (No ghosts) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "purchase",
+      ecommerce: {
+        transaction_id: "TXN123456",
+        value: 99.99,
+        currency: "USD",
+        coupon: "SUMMER25",
+        payment_type: "credit_card",
+        items: [
+          {
+            item_id: "SKU123",
+            item_name: "Premium Course Access",
+            price: 99.99,
+            quantity: 1
+          }
+        ]
+      }
+    });
+  </script>
 </body>
 </html>
