@@ -21,13 +21,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     // Initialize GA4
     gtag('config', 'G-S6MFWSG27B');
 
-    // Fire conversion event
-    gtag('event', 'purchase', {
-      value: 99.99,
-      currency: 'INR',
-      transaction_id: 'TXN123456',
-      debug_mode: true
-    });
+    <script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: "purchase",
+  ecommerce: {
+    transaction_id: "TXN123456",
+    value: 99.99,
+    currency: "USD",
+    coupon: "SUMMER25",
+    payment_type: "credit card",
+    items: [
+      {
+        item_id: "SKU123",
+        item_name: "Premium Course Access",
+        price: 99.99,
+        quantity: 1
+      }
+    ]
+  }
+});
+</script>
   </script>
 
   <style>
