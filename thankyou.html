@@ -24,7 +24,8 @@
   </script>
 
   <!-- ✅ Purchase Event: Data Layer Push -->
-  <script>
+ <script>
+  window.addEventListener('DOMContentLoaded', function () {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
       event: "purchase",
@@ -44,7 +45,8 @@
         ]
       }
     });
-  </script>
+  });
+</script>
 
   <!-- ✅ Styles -->
   <style>
