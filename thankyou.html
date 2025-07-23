@@ -24,28 +24,7 @@
   </script>
 
   <!-- ✅ Purchase Event: Data Layer Push -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: "purchase",
-    debug_mode: true,
-    ecommerce: {
-      transaction_id: "TXN123456",
-      value: 99.99,
-      currency: "USD",
-      coupon: "SUMMER25",
-      payment_type: "credit card",
-      items: [
-        {
-          item_id: "SKU123",
-          item_name: "Premium Course Access",
-          price: 99.99,
-          quantity: 1
-        }
-      ]
-    }
-  });
-</script>
+
   <!-- ✅ Styles -->
   <style>
     body {
@@ -163,5 +142,27 @@
 
     <a class="btn" href="index.html">← Back to Home</a>
   </div>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "purchase",
+    debug_mode: true,
+    ecommerce: {
+      transaction_id: "TXN123456",
+      value: 99.99,
+      currency: "USD",
+      coupon: "SUMMER25",
+      payment_type: "credit card",
+      items: [
+        {
+          item_id: "SKU123",
+          item_name: "Premium Course Access",
+          price: 99.99,
+          quantity: 1
+        }
+      ]
+    }
+  });
+</script>
 </body>
 </html>
