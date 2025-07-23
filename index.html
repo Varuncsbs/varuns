@@ -1,23 +1,29 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GA4 Test Site</title>  <!-- Google Tag Manager -->  <script>
-    (function(w,d,s,l,i){
-      w[l]=w[l]||[];
-      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
+  <meta charset="UTF-8" />
+  <title>GA4 Test Site</title>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-55KCJGXT');
-  </script>  <!-- End Google Tag Manager -->  <!-- Global Site Tag (gtag.js) - Google Analytics -->  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6MFWSG27B"></script>  <script>
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- GA4 Config -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6MFWSG27B"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-S6MFWSG27B');
-  </script>  <style>
+  </script>
+
+  <style>
     body {
       font-family: Arial, sans-serif;
       padding: 2rem;
@@ -45,40 +51,55 @@
     button:hover, a:hover {
       background-color: #0056b3;
     }
-  </style></head>
+  </style>
+</head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55KCJGXT"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->  <h1>Welcome to Varun's GA4 Practice Site</h1>  <div class="section">
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55KCJGXT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <h1>Welcome to Varun's GA4 Practice Site</h1>
+
+  <div class="section">
     <h2>1. Sign Up Section</h2>
-    <button id="signUpBtn">Sign Up Now</button>
-  </div>  <div class="section">
+    <button onclick="gtag('event', 'signup_click', {
+      'event_category': 'engagement',
+      'event_label': 'Signup Button',
+      'value': 1
+    })">Sign Up Now</button>
+  </div>
+
+  <div class="section">
     <h2>2. Contact Section</h2>
     <button id="contactBtn">Contact Us</button>
-  </div>  <div class="section">
+  </div>
+
+  <div class="section">
     <h2>3. Download Resource</h2>
     <a href="#" id="downloadBtn">Download Brochure</a>
-  </div>  <div class="section">
+  </div>
+
+  <div class="section">
     <h2>4. Subscribe</h2>
-    <input type="email" placeholder="Enter your email">
+    <input type="email" placeholder="Enter your email" />
     <button id="subscribeBtn">Subscribe</button>
-  </div>  <div class="section">
+  </div>
+
+  <div class="section">
     <h2>5. Learn More</h2>
     <a href="#" id="learnMoreBtn">Learn More</a>
-  </div>  <div class="section">
+  </div>
+
+  <div class="section">
     <h2>6. Product Section</h2>
-    <p>Sample Product - ₹999</p>
-    <button id="buyNowBtn">Buy Now</button>
-  </div>  <script>
-    // Optional GA4 purchase event trigger
-    document.getElementById('buyNowBtn').addEventListener('click', function () {
-      gtag('event', 'purchase', {
-        value: 99.99,
-        currency: 'INR',
-        transaction_id: 'TXN123456',
-        debug_mode: true
-      });
-    });
-  </script></body>
+    <p>Sample Product - ₹99.99</p>
+    <a href="thankyou.html">
+      <button id="buyNowBtn">Buy Now</button>
+    </a>
+  </div>
+</body>
 </html>
