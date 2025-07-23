@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Thank You!</title>
-   <script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ Google Tag Manager -->
+  <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-55KCJGXT');
   </script>
-  
-  <!-- GA4 Global Site Tag -->
+
+  <!-- ✅ GA4 Global Site Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S6MFWSG27B"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,9 +22,8 @@
     gtag('js', new Date());
     gtag('config', 'G-S6MFWSG27B');
   </script>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- ✅ Purchase Event: Data Layer Push -->
   <script>
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push({
@@ -44,15 +46,9 @@
     });
   </script>
 
-
-  
-
-  <!-- GA4 Global Site Tag -->
-  
+  <!-- ✅ Styles -->
   <style>
-    body 
-     
-    {
+    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f4f6f8;
       display: flex;
@@ -130,45 +126,42 @@
       color: #222;
     }
   </style>
-   
 </head>
 
 <body>
+  <!-- ✅ GTM NoScript Fallback -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55KCJGXT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <!-- GTM Fallback for No-JS -->
- 
 
+  <!-- ✅ Main Thank You Section -->
   <div class="thank-you-box">
     <h1>🎉 Thank You!</h1>
     <p>Your purchase was successful.</p>
+
     <div class="details">
-      <strong>Transaction ID:</strong> TXN123456<br>
-      <strong>Amount:</strong> ₹99.99<br>
+      <strong>Transaction ID:</strong> TXN123456<br />
+      <strong>Amount:</strong> ₹99.99<br />
       <strong>Status:</strong> Conversion Tracked via GA4
     </div>
 
     <div class="order-summary">
       <h2>Order Summary</h2>
       <div class="item">
-        <strong>Product:</strong> Premium Course Access<br>
-        <strong>SKU:</strong> SKU123<br>
-        <strong>Quantity:</strong> 1<br>
+        <strong>Product:</strong> Premium Course Access<br />
+        <strong>SKU:</strong> SKU123<br />
+        <strong>Quantity:</strong> 1<br />
         <strong>Price:</strong> $99.99
       </div>
       <div>
-        <strong>Total:</strong> $99.99<br>
-        <strong>Coupon:</strong> SUMMER25<br>
+        <strong>Total:</strong> $99.99<br />
+        <strong>Coupon:</strong> SUMMER25<br />
         <strong>Payment:</strong> Credit Card
       </div>
     </div>
 
     <a class="btn" href="index.html">← Back to Home</a>
   </div>
-
-  <!-- ✅ Clean Purchase Event Push (No ghosts) -->
-  
 </body>
 </html>
